@@ -18,7 +18,27 @@ executable baseball
   hs-source-dirs:      src
   main-is:             Main.hs
   build-depends:       base >= 4.7 && < 5,
+                       baseball,
+                       bytestring,
+                       cassava
+  default-language:    Haskell2010
+
+library
+  ghc-options:         -Wall
+  exposed-modules:     Baseball
+  build-depends:       base >= 4.7 && <5,
                        bytestring,
                        vector,
                        cassava
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+test-suite tests
+  ghc-options:         -Wall
+  type:                exitcode-stdio-1.0
+  main-is:             Tests.hs
+  hs-source-dirs:      tests
+  build-depends:       base,
+                       baseball,
+                       hspec 
   default-language:    Haskell2010
