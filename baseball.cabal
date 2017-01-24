@@ -1,20 +1,24 @@
 name:                baseball
 version:             0.1.0.0
-synopsis:            Simple project template from stack
+synopsis:            Processing some csv data 
 description:         Please see README.md
-homepage:            https://github.com/githubuser/baseball#readme
+homepage:            https://github.com/chengzh2008/baseball#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2017 Author name here
-category:            Web
+author:              Zhihong Cheng 
+maintainer:          a@b.com
+copyright:           2017 Zhihong Cheng
+category:            Data 
 build-type:          Simple
 cabal-version:       >=1.10
 extra-source-files:  README.md
 
 executable baseball
+  ghc-options:         -Wall
   hs-source-dirs:      src
   main-is:             Main.hs
+  build-depends:       base >= 4.7 && < 5,
+                       bytestring,
+                       vector,
+                       cassava
   default-language:    Haskell2010
-  build-depends:       base >= 4.7 && < 5
