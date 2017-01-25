@@ -1,4 +1,4 @@
-module Baseball
+module Main where
 
 import Baseball
 import Test.Hspec
